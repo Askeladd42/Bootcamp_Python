@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 19:59:10 by plam              #+#    #+#              #
-#    Updated: 2020/03/09 20:25:26 by plam             ###   ########.fr        #
+#    Updated: 2020/03/09 23:56:05 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,9 +26,17 @@ def text_analyzer(text):
 			lcase += 1
 		elif text[i] in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
 			ucase += 1
-		elif text[i] in "!":
+		elif text[i] in ".:;?!,":
 			p_marks += 1
 		elif text[i] == " ":
 			sp += 1
 		i += 1
-	print("lol")
+	print("The text contains " + str(i) + " characters:")
+	if ucase > 0:
+		print("- " + str(ucase) + " upper letters")
+	if lcase > 0:
+		print("- " + str(lcase) + " lower letters")
+	if p_marks > 0:
+		print("- " + str(p_marks) + " punctuation marks")
+	if sp > 0:
+		print("- " + str(sp) + " spaces")
