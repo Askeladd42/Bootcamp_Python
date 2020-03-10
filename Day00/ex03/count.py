@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 19:59:10 by plam              #+#    #+#              #
-#    Updated: 2020/03/10 15:40:36 by plam             ###   ########.fr        #
+#    Updated: 2020/03/10 17:28:58 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ def text_analyzer(text):
 				elif text[i] == " ":
 					sp += 1
 				i += 1
-		print("The text contains " + str(i) + " characters:")
+			print("The text contains " + str(i) + " characters:")
 		if ucase > 0:
 			print("- " + str(ucase) + " upper letters")
 		if lcase > 0:
@@ -50,4 +50,4 @@ def text_analyzer(text):
 		text = input("")
 		text_analyzer(text)
 	else:
-		SystemExit()
+		SystemExit(1)
