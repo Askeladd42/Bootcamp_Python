@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 19:59:10 by plam              #+#    #+#              #
-#    Updated: 2020/03/10 15:33:51 by plam             ###   ########.fr        #
+#    Updated: 2020/03/10 15:38:07 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ def text_analyzer(text):
 		character (even spaces) used on it.
 		No that is not a line for slacking!
 	"""
-	try:
+	if text:
 		lcase = 0
 		ucase = 0
 		p_marks = 0
@@ -45,6 +45,8 @@ def text_analyzer(text):
 			print("- " + str(p_marks) + " punctuation marks")
 		if sp > 0:
 			print("- " + str(sp) + " spaces")
-	except TypeError:
+	elif TypeError:
 		text = input("What is the text to analyse?")
 		text_analyzer(text)
+	else:
+		SystemExit()
