@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 19:59:10 by plam              #+#    #+#              #
-#    Updated: 2020/03/10 15:38:07 by plam             ###   ########.fr        #
+#    Updated: 2020/03/10 15:40:36 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,8 @@ def text_analyzer(text):
 		if sp > 0:
 			print("- " + str(sp) + " spaces")
 	elif TypeError:
-		text = input("What is the text to analyse?")
+		print("What is the text to analyse?")
+		text = input("")
 		text_analyzer(text)
 	else:
 		SystemExit()
