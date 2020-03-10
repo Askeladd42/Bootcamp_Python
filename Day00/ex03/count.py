@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 19:59:10 by plam              #+#    #+#              #
-#    Updated: 2020/03/10 17:28:58 by plam             ###   ########.fr        #
+#    Updated: 2020/03/10 18:22:12 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,4 +50,5 @@ def text_analyzer(text):
 		text = input("")
 		text_analyzer(text)
 	else:
-		SystemExit(1)
+		print("ERROR")
+		sys.exit(1)
