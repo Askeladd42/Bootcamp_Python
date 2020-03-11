@@ -1,36 +1,23 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    kata02.py                                          :+:      :+:    :+:    #
+#    kata03.py                                          :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/03/10 17:59:46 by plam              #+#    #+#              #
-#    Updated: 2020/03/11 23:53:46 by plam             ###   ########.fr        #
+#    Created: 2020/03/11 23:55:21 by plam              #+#    #+#              #
+#    Updated: 2020/03/12 00:04:41 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-t = (3,30,2019,9,25)
+#enlever le \n a la fin
 
-if t[0] < 10:
-	hour = "0" + str(t[0])
-else:
-	hour = str(t[0])
-hour += ":"
-if t[1] < 10:
-	hour += "0" + str(t[1])
-else:
-	hour += str(t[1])
-
-if t[3] < 10:
-	date = "0" + str(t[3])
-else:
-	date = str(t[3])
-date += "/"
-if t[4] < 10:
-	date += "0" + str(t[4])
-else:
-	date += str(t[4])
-date += "/" + str(t[2])
-
-print(date + " " + hour)
+phrase = "The right format"
+padding = ""
+limit = 0
+if len(phrase) < 42:
+	limit = 42 - len(phrase)
+for i in range (limit):
+	padding += "-"
+display = padding + phrase
+print(display)
