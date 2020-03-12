@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/12 18:07:19 by plam              #+#    #+#              #
-#    Updated: 2020/03/12 21:01:42 by plam             ###   ########.fr        #
+#    Updated: 2020/03/12 23:42:52 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ class Book(object):
 
 	def get_recipe_by_name(self, name):
 		"""Print a recipe with the name `name` and return the instance"""
+		print(self.name.values)
 		pass
 
 	def get_recipes_by_types(self, recipe_type):
