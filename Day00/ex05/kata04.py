@@ -6,8 +6,31 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/12 00:05:23 by plam              #+#    #+#              #
-#    Updated: 2020/03/12 00:06:27 by plam             ###   ########.fr        #
+#    Updated: 2020/03/12 10:50:49 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 t = ( 0, 4, 132.42222, 10000, 12345.67)
+
+day = "day_"
+ex = "ex_"
+if t[0] < 10:
+	day += "0" + str(t[0])
+else:
+	day += str(t[0])
+if t[1] < 10:
+	ex += "0" + str(t[1])
+else:
+	ex += str(t[1])
+
+list = ""
+for i in range (2, len(t)):
+	if t[i] > 999:
+		list += format(t[i], "5.2e")
+	else:
+		list += str(round(t[i], 2))
+	if i < len(t) - 1:
+		list += ", "
+
+print(day + ", " + ex + " : ", end="")
+print(list)
