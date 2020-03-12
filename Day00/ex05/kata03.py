@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/11 23:55:21 by plam              #+#    #+#              #
-#    Updated: 2020/03/12 00:04:41 by plam             ###   ########.fr        #
+#    Updated: 2020/03/12 10:07:26 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,4 +20,4 @@ if len(phrase) < 42:
 for i in range (limit):
 	padding += "-"
 display = padding + phrase
-print(display)
+print(display, end="")
