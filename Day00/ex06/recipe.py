@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/12 10:51:48 by plam              #+#    #+#              #
-#    Updated: 2020/03/12 14:56:57 by plam             ###   ########.fr        #
+#    Updated: 2020/03/12 14:59:54 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -102,7 +102,7 @@ else:
 	elif p == "3":
 		r = input("Please enter the recipe's name to get its details:\n")
 		if r in cookbook:
-			print(cookbook[r])
+			p_recipe(r)
 		else:
 			while r != "5" or r not in cookbook:
 				r = input("This option does not exist, please type the corresponding recipe.\n" +
