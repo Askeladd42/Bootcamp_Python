@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/12 10:51:48 by plam              #+#    #+#              #
-#    Updated: 2020/03/12 14:48:13 by plam             ###   ########.fr        #
+#    Updated: 2020/03/12 14:56:57 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,35 +81,38 @@ p = input("Please select an option by typing the corresponding number:\n"
 		+ "3: Print a recipe\n" 
 		+ "4: Print the cookbook\n" 
 		+ "5: Quit\n")
-if p == 1:
-	r = input("Please enter the recipe's name and  its details (ingredients, meal, preparation time):\n")
-	if len(list(r)) == 4:
-		add_recipe(r[0], r[1], r[2], r[3])
-elif p == 2:
-	r = input("Please enter the recipe's name to delete:\n")
-	if r in cookbook:
-		d_recipe(r)
-	else:
-		while r != 5 or r not in cookbook:
-			r = input("This option does not exist, please type the corresponding recipe.\n" +
-						"To exit, enter 5.")
-			if r == 5:
-				sys.exit(1)
-elif p == 3:
-	r = input("Please enter the recipe's name to get its details:\n")
-	if r in cookbook:
-		print(cookbook[r])
-	else:
-		while r != 5 or r not in cookbook:
-			r = input("This option does not exist, please type the corresponding recipe.\n" +
-						"To exit, enter 5.")
-			if r == 5:
-				sys.exit(1)
-elif p == 4:
-	print(cookbook)
-elif p == 5:
-	print("Cookbook closed.")
-	sys.exit(1)
+while p not in "12345":
+	p = input("This option does not exist, please type the corresponding number.\nTo exit, enter 5.\n")
 else:
-	while p not in "12345":
-		p = input("This option does not exist, please type the corresponding number.\nTo exit, enter 5.\n")
+	if p == "1":
+		r = input("Please enter the recipe's name and  its details (ingredients, meal, preparation time):\n")
+		if len(list(r)) == 4:
+			add_recipe(r[0], r[1], r[2], r[3])
+	elif p == "2":
+		r = input("Please enter the recipe's name to delete:\n")
+		if r in cookbook:
+			d_recipe(r)
+		else:
+			while r != "5" or r not in cookbook:
+				r = input("This option does not exist, please type the corresponding recipe.\n" +
+							"To exit, enter 5.\n")
+				if r == "5":
+					print("Cookbook closed.")
+					sys.exit(1)
+	elif p == "3":
+		r = input("Please enter the recipe's name to get its details:\n")
+		if r in cookbook:
+			print(cookbook[r])
+		else:
+			while r != "5" or r not in cookbook:
+				r = input("This option does not exist, please type the corresponding recipe.\n" +
+							"To exit, enter 5.\n")
+				if r == "5":
+					print("Cookbook closed.")
+					sys.exit(1)
+	elif p == "4":
+		print(cookbook)
+	elif p == "5":
+		print("Cookbook closed.")
+		sys.exit(1)
+	
