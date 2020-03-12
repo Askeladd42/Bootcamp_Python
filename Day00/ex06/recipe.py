@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/12 10:51:48 by plam              #+#    #+#              #
-#    Updated: 2020/03/12 14:59:54 by plam             ###   ########.fr        #
+#    Updated: 2020/03/12 15:06:19 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,10 @@ print(cookbook.items())
 #2.
 
 def p_recipe(recipe):
-	print(cookbook[recipe])
+	print("Recipe for " + recipe + ":")
+	print("Ingredients list: " + cookbook[recipe]['ingredients'])
+	print("To be eaten for " + cookbook[recipe]['meal'] + ".")
+	print("Takes " + cookbook[recipe]['prep_time'] + " minutes of cooking.")
 
 ##p_recipe('cake')
 
