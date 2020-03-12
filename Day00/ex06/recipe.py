@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/12 10:51:48 by plam              #+#    #+#              #
-#    Updated: 2020/03/12 15:13:25 by plam             ###   ########.fr        #
+#    Updated: 2020/03/12 17:59:39 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -105,15 +105,14 @@ else:
 						sys.exit(1)
 		elif p == "3":
 			r = input("Please enter the recipe's name to get its details:\n")
-			if r in cookbook:
+			while r != "5" and r not in cookbook:
+				r = input("This option does not exist, please type the corresponding recipe.\n" +
+							"To exit, enter 5.\n")
+			if r == "5":
+					print("Cookbook closed.")
+					sys.exit(1)
+			elif r in cookbook:
 				p_recipe(r)
-			else:
-				while r != "5" or r not in cookbook:
-					r = input("This option does not exist, please type the corresponding recipe.\n" +
-								"To exit, enter 5.\n")
-					if r == "5":
-						print("Cookbook closed.")
-						sys.exit(1)
 		elif p == "4":
 			for i in cookbook:
 				p_recipe(i)
