@@ -6,21 +6,22 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 19:59:10 by plam              #+#    #+#              #
-#    Updated: 2020/03/12 11:17:36 by plam             ###   ########.fr        #
+#    Updated: 2020/03/20 16:36:38 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # cas arg vide et multi args à patcher
 
 import sys
-from inspect import signature
 
 def text_analyzer(text=None):
 	"""This a very useful function to detail the number of each type of 
 		character (even spaces) used on it.
 		No that is not a line for slacking!
 	"""
-	if len(sys.argv) > 2
+	if len(sys.argv) > 2:
+		print("ERROR")
+		sys.exit(1)
 	if text:
 		lcase = 0
 		ucase = 0
