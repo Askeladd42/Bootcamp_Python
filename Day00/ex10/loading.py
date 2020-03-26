@@ -1,21 +1,25 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    answers.txt                                        :+:      :+:    :+:    #
+#    loading.py                                         :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/03/09 11:38:17 by plam              #+#    #+#              #
-#    Updated: 2020/03/09 11:51:06 by plam             ###   ########.fr        #
+#    Created: 2020/03/24 17:13:38 by plam              #+#    #+#              #
+#    Updated: 2020/03/24 20:30:07 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-1. pip list
+import time
+import sys
 
-2.
+def ft_progress(lst):
+	
 
-3.
-
-4. pip search "tesseract"
-
-5. pip freeze > requirements.txt
+listy = range(1000)
+ret = 0
+for elem in ft_progress(listy):
+    ret += (elem + 3) % 5
+    sleep(0.01)
+print()
+print(ret)
